@@ -1,0 +1,112 @@
+.inv-list-wrapper {
+    padding: 20px 30px;
+    background-color: #f8fafc;
+    min-height: 100%;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.inv-list-header {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+}
+
+.inv-list-header h2 {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inv-list-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid #f1f5f9;
+}
+
+/* Toolbar */
+.inv-list-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.inv-search-box { position: relative; width: 350px; }
+.inv-search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #94a3b8; }
+.inv-search-box input {
+    width: 100%; padding: 12px 15px 12px 42px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; transition: 0.2s;
+}
+.inv-search-box input:focus { border-color: #008080; box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1); }
+
+.inv-btn-add-new {
+    background: #008080; color: white; border: none; padding: 12px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s;
+}
+.inv-btn-add-new:hover { background: #006666; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,128,128,0.2); }
+
+/* Bảng Strict (Chống vỡ layout) */
+.inv-table-responsive { width: 100%; overflow-x: auto; }
+.inv-strict-table { display: table !important; width: 100% !important; border-collapse: collapse !important; table-layout: auto !important; margin: 0 !important; }
+.inv-strict-table thead { display: table-header-group !important; }
+.inv-strict-table tbody { display: table-row-group !important; }
+.inv-strict-table tr { display: table-row !important; background: white; border-bottom: 1px solid #f1f5f9 !important; transition: 0.2s;}
+.inv-strict-table tr:hover { background: #f8fafc !important; }
+.inv-strict-table th, .inv-strict-table td { display: table-cell !important; padding: 16px 15px !important; vertical-align: middle !important; text-align: left;}
+.inv-strict-table th { background: #f8fafc !important; color: #64748b !important; font-size: 13px !important; font-weight: 700 !important; text-transform: uppercase !important; }
+.inv-strict-table td { color: #334155 !important; font-size: 14px !important; }
+
+/* Helpers */
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.fw-bold { font-weight: 600 !important; }
+.text-gray { color: #64748b !important; }
+.text-teal { color: #008080 !important; }
+.text-red { color: #ef4444 !important; }
+.empty-row { text-align: center !important; padding: 40px !important; color: #94a3b8 !important; font-style: italic; }
+.inv-loading-text { text-align: center; padding: 40px; color: #008080; font-weight: bold; }
+
+/* Badges */
+.badge { padding: 6px 14px !important; border-radius: 20px !important; font-size: 12px !important; font-weight: 600 !important; display: inline-block !important; white-space: nowrap; }
+.badge-pending { background-color: #fffbeb !important; color: #d97706 !important; } 
+.badge-approved { background-color: #f0fdfa !important; color: #0d9488 !important; } 
+.badge-shipping { background-color: #f5f3ff !important; color: #7c3aed !important; } 
+.badge-completed { background-color: #ecfdf5 !important; color: #059669 !important; } 
+.badge-cancelled, .badge-rejected { background-color: #fef2f2 !important; color: #dc2626 !important; } 
+
+/* Nút thao tác bảng */
+.cell-actions { display: flex; gap: 8px; justify-content: center; }
+.btn-icon-edit, .btn-icon-delete { width: 34px; height: 34px; border-radius: 8px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.2s; }
+.btn-icon-edit { background: #fef3c7; color: #d97706; }
+.btn-icon-edit:hover { background: #fde68a; }
+.btn-icon-delete { background: #fee2e2; color: #dc2626; }
+.btn-icon-delete:hover { background: #fca5a5; }
+
+/* Modal Xóa */
+.inv-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(2px);}
+.inv-modal-small { background: white; padding: 30px; border-radius: 16px; width: 380px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.modal-icon-warn { font-size: 48px; color: #f59e0b; margin-bottom: 15px; }
+.inv-modal-small h3 { margin: 0 0 10px 0; color: #1e293b; font-size: 20px;}
+.inv-modal-small p { color: #64748b; font-size: 14px; margin-bottom: 25px; line-height: 1.5;}
+.modal-actions { display: flex; gap: 12px; }
+.btn-cancel, .btn-confirm-delete { flex: 1; padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; border: none; transition: 0.2s; }
+.btn-cancel { background: #f1f5f9; color: #475569; }
+.btn-cancel:hover { background: #e2e8f0; }
+.btn-confirm-delete { background: #ef4444; color: white; }
+.btn-confirm-delete:hover { background: #dc2626; }
+
+@media (max-width: 768px) {
+    .inv-list-toolbar { flex-direction: column; align-items: stretch; }
+    .inv-search-box { width: 100%; }
+}

@@ -1,0 +1,102 @@
+/* --- NỀN VÀ KHUNG --- */
+.ha-auth-bg {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ảnh nền liên quan đến nội thất Harmony */
+    background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+/* Lớp phủ để form nổi bật hơn trên nền ảnh */
+.ha-auth-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Màu đen mờ 40% */
+    z-index: 1;
+}
+
+.ha-auth-bg * { box-sizing: border-box !important; }
+
+.ha-auth-card {
+    background: rgba(255, 255, 255, 0.95); /* Trắng gần như tuyệt đối để nhìn sạch sẽ */
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 10; /* Nằm trên lớp phủ overlay */
+}
+
+.ha-auth-header { text-align: center; margin-bottom: 25px; }
+.ha-icon-circle { width: 60px; height: 60px; background: #f0fbfb; color: #046A62; font-size: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
+.ha-auth-header h2 { color: #1a1a1a; font-size: 24px; margin: 0; font-weight: 800; letter-spacing: 1px; }
+.ha-auth-header p { color: #555; font-size: 14px; margin-top: 5px; }
+
+/* --- INPUT VÀ LỖI --- */
+.ha-input-group { margin-bottom: 15px; position: relative; }
+.ha-input-group label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 6px; color: #333; }
+.ha-input-group input { 
+    width: 100%; 
+    padding: 12px 16px; 
+    border: 1.5px solid #e2e8f0; 
+    border-radius: 10px; 
+    outline: none; 
+    transition: 0.3s; 
+    font-size: 14.5px;
+    background: #fff;
+}
+.ha-input-group input:focus { border-color: #046A62; box-shadow: 0 0 0 3px rgba(4, 106, 98, 0.1); }
+
+/* Trạng thái lỗi Inline */
+.ha-input-group.has-error input { border-color: #e74c3c; background-color: #fffafb; }
+.error-msg { color: #e74c3c; font-size: 11.5px; font-weight: 600; margin-top: 4px; display: block; }
+.error-alert { background: #fdf2f2; color: #e74c3c; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 13.5px; text-align: center; border: 1px solid #facccc; font-weight: 600; }
+
+.ha-pwd-wrapper { position: relative; }
+.ha-eye-icon { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #a0aec0; transition: 0.2s; }
+.ha-eye-icon:hover { color: #046A62; }
+
+/* --- CHECKBOX --- */
+.ha-checkbox-wrapper { margin-bottom: 20px; }
+.ha-checkbox-label { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 13.5px; color: #444; }
+.ha-checkbox-label input { width: 18px; height: 18px; margin-top: 2px; accent-color: #046A62; }
+
+/* --- NÚT BẤM --- */
+.ha-btn-primary { 
+    width: 100%; 
+    padding: 16px; 
+    background: #046A62; 
+    color: #fff; 
+    border: none; 
+    border-radius: 10px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    font-size: 15px; 
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.ha-btn-primary:hover { background: #034f49; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+.ha-btn-primary:disabled { background: #94c2c2; cursor: not-allowed; transform: none; }
+
+.ha-back-link { 
+    text-decoration: none; 
+    color: #046A62; 
+    font-size: 14px; 
+    font-weight: 600; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin-bottom: 25px; 
+    transition: 0.2s; 
+}
+.ha-back-link:hover { color: #D4AF37; transform: translateX(-5px); }
+
+.ha-auth-footer { text-align: center; margin-top: 25px; font-size: 14.5px; color: #444; }
+.ha-auth-footer a { color: #D4AF37; font-weight: 700; text-decoration: none; margin-left: 5px; }
+.ha-auth-footer a:hover { text-decoration: underline; }

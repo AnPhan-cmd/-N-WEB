@@ -1,0 +1,194 @@
+/* =========================================
+   7. TRANG GIỚI THIỆU (ABOUT US)
+========================================= */
+
+.ContentsAboutUs {
+    width: 100%;
+    max-width: 1240px;
+    margin: 145px auto 40px; /* Offset cho Header fixed tránh bị che */
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContentsAboutUs h1 {
+    font-size: 36px;
+    color: var(--primary-color, #046A62); /* Đổi sang Xanh Cổ Vịt */
+    margin: 20px 0 40px;
+    font-weight: 700;
+    width: 100%; 
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Phần introduction với layout 50/50 */
+.introduction {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto 60px;
+    gap: 50px;
+    align-items: center;
+}
+
+.Designer {
+    flex: 1;
+}
+
+.Designer img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md, 0 10px 24px rgba(4, 106, 98, 0.1));
+    object-fit: cover;
+}
+
+.contents {
+    flex: 1;
+    text-align: left;
+}
+
+/* Điều chỉnh Typography cho tinh tế và chuyên nghiệp */
+.contents b, 
+table b {
+    font-size: 20px;
+    color: var(--primary-color, #046A62);
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contents p,
+table p {
+    font-size: 16px; /* Giảm từ 24px xuống 16px chuẩn web cao cấp */
+    line-height: 1.8;
+    color: var(--text-dark, #2C3E50);
+    margin-bottom: 15px;
+}
+
+.contents ul,
+table td ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.contents ul li,
+table td ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-dark, #2C3E50);
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Biến bullet point thành dấu tick màu Vàng Gold chuyên nghiệp */
+.contents ul li::before,
+table td ul li::before {
+    content: "\2713"; 
+    color: var(--accent-color, #D4AF37); 
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+table td ul li b {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-dark, #2C3E50);
+}
+
+/* Xử lý Table Layout (Tránh vỡ grid) */
+table {
+    margin: 40px auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 50px;
+    gap: 40px;
+}
+
+table td {
+    flex: 1 1 calc(50% - 20px);
+    text-align: left;
+    vertical-align: top;
+    padding: 0;
+}
+
+/* Trường hợp đặc biệt cho hàng chỉ có 1 cột */
+table tr:has(td:only-child) td {
+    flex: 1 1 100%;
+    width: 100%;
+}
+
+table td img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md, 0 10px 24px rgba(4, 106, 98, 0.1));
+}
+
+/* --- BLOCK "AN TOÀN / CAM KẾT" (Làm mới sang trọng) --- */
+.antoan {
+    background-color: var(--primary-color, #046A62); /* Nền Xanh Cổ Vịt */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md, 0 10px 24px rgba(4, 106, 98, 0.1));
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.antoan h1 {
+    color: var(--accent-color, #D4AF37) !important; /* Chữ Vàng Gold */
+    font-size: 28px !important;
+    margin: 0 0 15px 0 !important;
+    text-align: left !important;
+    text-transform: none !important;
+}  
+
+.antoan p {
+    color: var(--bg-white, #FFFFFF) !important;
+    font-size: 16px !important;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* --- RESPONSIVE CHO TRANG ABOUT US --- */
+@media screen and (max-width: 900px) {
+    .introduction {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .Designer,
+    .contents {
+        width: 100%;
+    }
+    
+    table tr {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    table td {
+        flex: 1 1 100%;
+    }
+    
+    .antoan {
+        padding: 25px;
+    }
+}

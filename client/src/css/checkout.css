@@ -1,0 +1,246 @@
+/* --- RESET MẶC ĐỊNH ĐỂ ĐỒNG BỘ LAYOUT --- */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f4f6f8;
+}
+
+.hc-wrapper {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-bottom: 80px;
+}
+
+.hc-wrapper * {
+    box-sizing: border-box !important;
+}
+
+/* KHUNG CHUẨN 1200PX - NỀN TẢNG CĂN GIỮA */
+.hc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* --- HEADER ĐẶC TRƯNG THEO ẢNH 2 --- */
+.hc-header {
+    background-color: #008080;
+    padding: 18px 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.hc-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hc-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.hc-logo {
+    height: 55px !important;
+    width: auto !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    display: block;
+    object-fit: contain;
+}
+
+.hc-divider { 
+    margin: 0 20px; 
+    color: rgba(255,255,255,0.3); 
+    font-size: 24px; 
+    font-weight: 300;
+}
+
+.hc-title { 
+    font-weight: 700; 
+    font-size: 18px; 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hc-breadcrumb { 
+    color: rgba(255,255,255,0.8); 
+    font-size: 14px;
+}
+.hc-breadcrumb a { color: inherit; text-decoration: none; transition: 0.3s; }
+.hc-breadcrumb a:hover { color: #fff; }
+.hc-arrow { margin: 0 10px; opacity: 0.5; }
+.hc-active { color: #fff; font-weight: 700; }
+
+/* --- MAIN LAYOUT 2 CỘT CÂN ĐỐI --- */
+.hc-main {
+    display: flex;
+    gap: 40px;
+    margin-top: 45px;
+    align-items: flex-start;
+}
+
+.hc-left { flex: 1; min-width: 0; }
+.hc-right { width: 420px; flex-shrink: 0; }
+
+/* THIẾT KẾ THẺ TRẮNG (CARD) */
+.hc-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+    border: 1px solid #eef1f4;
+}
+
+.hc-mt-4 { margin-top: 25px; }
+.hc-heading { 
+    font-size: 20px; 
+    color: #008080; 
+    margin-top: 0; 
+    margin-bottom: 25px; 
+    font-weight: 700; 
+    border-left: 4px solid #b88e2f;
+    padding-left: 15px;
+}
+
+/* --- FORM ĐIỀN --- */
+.hc-row { display: flex; gap: 20px; }
+.hc-form-group { flex: 1; margin-bottom: 22px; }
+
+.hc-form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.hc-form-group input, 
+.hc-form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s;
+    background-color: #fafafa;
+}
+
+.hc-form-group input:focus, 
+.hc-form-group textarea:focus {
+    border-color: #008080;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.08);
+}
+
+.hc-payment-box {
+    border: 1px solid #008080;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f0fbfb;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.hc-check { color: #008080; font-size: 20px; }
+
+/* --- CỘT TÓM TẮT (SIDEBAR) --- */
+.hc-sticky { position: sticky; top: 30px; }
+.hc-summary-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    border-bottom: 2px solid #f4f6f8; 
+    padding-bottom: 15px;
+}
+.hc-summary-header h2 { font-size: 18px; margin: 0; color: #1a1a1a; font-weight: 700; }
+.hc-summary-header a { color: #008080; text-decoration: none; font-size: 13px; font-weight: 700; }
+
+.hc-product-list { margin-bottom: 25px; max-height: 380px; overflow-y: auto; padding-right: 8px; }
+
+.hc-product-item { 
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 18px; 
+    align-items: center; 
+}
+
+.hc-img-box { 
+    position: relative; 
+    flex-shrink: 0; 
+    width: 75px; 
+    height: 75px; 
+}
+
+.hc-img-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important; 
+    border-radius: 8px;
+    border: 1px solid #eee;
+    display: block;
+}
+
+/* FIX LỖI BỊ CHE TẠI ĐÂY */
+.hc-qty {
+    position: absolute; 
+    /* Chuyển sang vị trí dương để badge nằm TRONG khung ảnh */
+    top: 2px; 
+    right: 2px;
+    background: #008080; 
+    color: #fff;
+    width: 22px; /* Giảm nhẹ kích thước để nằm gọn trong góc */
+    height: 22px; 
+    border-radius: 50%;
+    font-size: 10px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: 800;
+    border: 1.5px solid #fff; /* Viền mỏng hơn để tinh tế hơn */
+    z-index: 2;
+}
+
+.hc-prod-info { flex: 1; }
+.hc-prod-name { margin: 0 0 6px 0; font-size: 14px; font-weight: 600; color: #333; line-height: 1.4; }
+.hc-prod-price { margin: 0; font-size: 14px; color: #b88e2f; font-weight: 700; }
+
+.hc-bill { margin-top: 10px; }
+.hc-bill-row { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 15px; color: #555; }
+.hc-bill-line { height: 1px; border-top: 1px dashed #ddd; margin: 20px 0; }
+.hc-total { font-size: 22px; font-weight: 800; color: #b88e2f; margin-top: 15px; }
+
+.hc-btn-submit {
+    width: 100%; background: #008080; color: #fff;
+    border: none; padding: 18px; border-radius: 10px;
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    margin-top: 25px; transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.hc-btn-submit:hover { background: #006666; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2); }
+.hc-btn-submit:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+.hc-trust-badges {
+    display: flex; justify-content: space-between;
+    margin-top: 30px; padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 10px; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .hc-main { flex-direction: column; gap: 30px; }
+    .hc-right { width: 100%; }
+    .hc-sticky { position: static; }
+}

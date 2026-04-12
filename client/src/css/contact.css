@@ -1,0 +1,130 @@
+/* Tổng nền trang Liên hệ */
+.contact-page-wrapper {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7f6; /* Nền xám nhạt để làm nổi bật thẻ form */
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Thẻ form căn giữa (Lấp khoảng trống) */
+.contact-card {
+    width: 100%;
+    max-width: 800px; /* Độ rộng thẻ vừa đủ to để lấp không gian */
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 128, 128, 0.08); /* Bóng đổ màu teal nhạt */
+    padding: 50px 60px;
+    border-top: 6px solid #008080; /* Viền xanh tạo điểm nhấn thương hiệu */
+}
+
+/* Phần tiêu đề */
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.contact-header p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form Styling */
+.contact-form {
+    width: 100%;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+}
+
+.half-width {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi bấm vào ô nhập */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #008080;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.1);
+}
+
+/* Nút Submit */
+.btn-submit-contact {
+    width: 100%;
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.btn-submit-contact:hover {
+    background-color: #006666;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 128, 128, 0.2);
+}
+
+.btn-submit-contact:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive cho Điện thoại / Tablet */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 40px 25px;
+    }
+    
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
